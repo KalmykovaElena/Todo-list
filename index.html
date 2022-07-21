@@ -29,11 +29,31 @@
                     <input type="password" name="password" class="form__field-input" placeholder="Type password"
                     >
                 </div>
-                <button class="orm__btn btn" type="submit">Accept</button>
+                <button class="form__btn btn" type="submit">Accept</button>
             </div>
+            <p class="form__notice">If you have account try to <a class="form__link link-up" href="#">Sign-in</a></p>
+        </form>
 
+
+        <form class="form hide" id="sing-in">
+            <div class="form-container">
+                <h2 class="form__title">Sing In</h2>
+                <div class="form__field">
+                    <label class="form__field-label">User name</label>
+                    <input type="text" name="name" class="form__field-input" placeholder="Type name" autocomplete="off">
+                </div>
+                <div class="form__field">
+                    <label class="form__field-label">Password</label>
+                    <input type="password" name="password" class="form__field-input" placeholder="Type password"
+                    >
+                </div>
+                <button class="form__btn btn" type="submit">Accept</button>
+            </div>
+            <p class="form__notice">Don't have account? try to <a class="form__link link-in" href="#">Sign-up</a></p>
         </form>
     </div>
 </section>
+
+<script src="./src/main.js" type="module"></script>
 </body>
 </html>

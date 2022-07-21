@@ -1,6 +1,35 @@
-.form {
-  border: 1px solid black;
+.btn {
+  width: 100%;
+  max-width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  display: block;
+  font-size: 1.8rem;
 }
+.btn:hover {
+  box-shadow: 0 0 4px 1px #b889e8;
+  text-shadow: 1px 1px 2px black, 0 0 1em red;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 1.4rem;
+    max-width: 145px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .btn {
+    font-size: 1rem;
+    max-width: 130px;
+    height: 30px;
+  }
+}
+
 .form-container {
   padding: 10px 25px;
   max-width: 500px;
@@ -95,6 +124,33 @@
     font-size: 1rem;
   }
 }
+.form__btn {
+  color: #ffffff;
+  background-color: #99befa;
+  margin: 10px auto;
+}
+.form__notice {
+  color: #7a7a7a;
+  text-align: center;
+  font-size: 2.3rem;
+  margin-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  .form__notice {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form__notice {
+    font-size: 1rem;
+  }
+}
+.form__link {
+  color: #4f051b;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .page-authorization {
   height: 100%;
@@ -120,6 +176,10 @@ html * {
 }
 html body {
   height: 100%;
+}
+
+.hide {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

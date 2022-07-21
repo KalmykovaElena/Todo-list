@@ -1,0 +1,31 @@
+.btn {
+  width: 100%;
+  max-width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  display: block;
+
+  font-size: $sub-text-large;
+
+  &:hover {
+    box-shadow: 0 0 4px 1px #b889e8;
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  @include respond-to(middle) {
+    font-size: $sub-text-middle;
+    max-width: 145px;
+    height: 35px;
+  }
+  @include respond-to(mobile) {
+    font-size: $sub-text-mobile;
+    max-width: 130px;
+    height: 30px;
+  }
+}
