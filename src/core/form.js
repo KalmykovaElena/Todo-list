@@ -11,4 +11,17 @@ export class Form {
         })
         return value
     }
+
+    isValid() {
+        let isValidateForm = true
+        Object.keys(this.controls).forEach((field) => {
+            const validators = this.controls[field]
+            let isValid = true
+            validators.forEach(validator => {
+                isValid = validator(this.form[field].value)
+            })
+            isValidateForm = isValid
+        })
+        return isValidateForm
+    }
 }
