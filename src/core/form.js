@@ -18,10 +18,11 @@ export class Form {
             const validators = this.controls[field]
             let isValid = true
             validators.forEach(validator => {
-                isValid = validator(this.form[field].value)
+                isValid = validator(this.form[field].value)&& isValid
             })
-            isValidateForm = isValid
+            isValidateForm = isValid&& isValidateForm
         })
+        console.log(isValidateForm)
         return isValidateForm
     }
 }
