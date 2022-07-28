@@ -85,12 +85,29 @@
         }
       }
     }
+
+    &.invalid {
+      .form__field-label {
+        color: #56221e;
+      }
+      .form__field-input{
+        border:1.5px solid #4f051b;
+        box-shadow: 0 0 10px 1px #56221e;
+      }
+
+      .form__field-warning {
+        color: maroon;
+        font-size: $sub-text-mobile;
+      }
+    }
   }
-  &__btn{
-    color:#ffffff;
+
+  &__btn {
+    color: #ffffff;
     background-color: #99befa;
     margin: 10px auto;
-}
+  }
+
   &__notice {
     color: #7a7a7a;
     text-align: center;
@@ -104,8 +121,9 @@
       font-size: $sub-text-mobile;
     }
   }
-  &__link{
-    color:#4f051b;
+
+  &__link {
+    color: #4f051b;
     font-size: inherit;
     text-decoration: none;
     cursor: pointer;

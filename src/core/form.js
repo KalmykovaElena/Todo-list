@@ -18,11 +18,47 @@ export class Form {
             const validators = this.controls[field]
             let isValid = true
             validators.forEach(validator => {
-                isValid = validator(this.form[field].value)&& isValid
+                isValid = validator(this.form[field].value) && isValid
             })
-            isValidateForm = isValid&& isValidateForm
+            !isValid ? setNoticeError(this.form[field]) : clearNoticeError(field)
+            isValidateForm = isValid && isValidateForm
         })
-        console.log(isValidateForm)
+
         return isValidateForm
     }
+
+    clear() {
+        Object.keys(this.controls).forEach(field => {
+            this.form[field].value = ''
+            clearNoticeError(this.form[field])
+        })
+    }
+}
+
+function setNoticeError(input) {
+    clearNoticeError(input)
+    input.parentElement.classList.add('invalid')
+    if (input.getAttribute('name') === 'name') {
+        input.insertAdjacentHTML('afterend', setErrorText('Field is required'))
+    }
+    if (input.getAttribute('name') === 'email') {
+        input.insertAdjacentHTML('afterend', setErrorText('Field is required (at least:"@")'))
+    }
+    if (input.getAttribute('name') === 'password') {
+        input.insertAdjacentHTML('afterend', setErrorText('Field is required (at least:1 letter, 1 digit, i uppercase letter)'))
+    }
+}
+
+function clearNoticeError(input) {
+    if (input.nextSibling) {
+        if (input.closest('.form__field')) {
+            input.closest('.form__field').removeChild(input.nextSibling)
+            input.parentElement.classList.add('invalid')
+        }
+    }
+}
+
+function setErrorText(text) {
+
+    return `<p class="form__field-warning">${text}</p>`
 }

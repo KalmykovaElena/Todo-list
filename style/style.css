@@ -124,6 +124,17 @@
     font-size: 1rem;
   }
 }
+.form__field.invalid .form__field-label {
+  color: #56221e;
+}
+.form__field.invalid .form__field-input {
+  border: 1.5px solid #4f051b;
+  box-shadow: 0 0 10px 1px #56221e;
+}
+.form__field.invalid .form__field-warning {
+  color: maroon;
+  font-size: 1rem;
+}
 .form__btn {
   color: #ffffff;
   background-color: #99befa;

@@ -7,8 +7,12 @@ export class Component {
     init() {
     }
 
+    onHide() {
+    }
+
     hide() {
         this.component.classList.add('hide')
+        this.onHide()
     }
 
     show() {
