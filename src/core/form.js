@@ -1,3 +1,5 @@
+import {content} from "./validators.js";
+
 export class Form {
     constructor(form, controls) {
         this.form = form
@@ -20,7 +22,7 @@ export class Form {
             validators.forEach(validator => {
                 isValid = validator(this.form[field].value) && isValid
             })
-            !isValid ? setNoticeError(this.form[field]) : clearNoticeError(field)
+            !isValid ? setNoticeError(this.form[field]) : clearNoticeError(this.form[field])
             isValidateForm = isValid && isValidateForm
         })
 
@@ -29,7 +31,7 @@ export class Form {
 
     clear() {
         Object.keys(this.controls).forEach(field => {
-            this.form[field].value = ''
+            this.form[field].value = '';
             clearNoticeError(this.form[field])
         })
     }
@@ -38,22 +40,14 @@ export class Form {
 function setNoticeError(input) {
     clearNoticeError(input)
     input.parentElement.classList.add('invalid')
-    if (input.getAttribute('name') === 'name') {
-        input.insertAdjacentHTML('afterend', setErrorText('Field is required'))
-    }
-    if (input.getAttribute('name') === 'email') {
-        input.insertAdjacentHTML('afterend', setErrorText('Field is required (at least:"@")'))
-    }
-    if (input.getAttribute('name') === 'password') {
-        input.insertAdjacentHTML('afterend', setErrorText('Field is required (at least:1 letter, 1 digit, i uppercase letter)'))
-    }
+    input.insertAdjacentHTML('afterend', setErrorText(content))
 }
 
 function clearNoticeError(input) {
     if (input.nextSibling) {
         if (input.closest('.form__field')) {
             input.closest('.form__field').removeChild(input.nextSibling)
-            input.parentElement.classList.add('invalid')
+            input.parentElement.classList.remove('invalid')
         }
     }
 }
@@ -62,3 +56,4 @@ function setErrorText(text) {
 
     return `<p class="form__field-warning">${text}</p>`
 }
+
