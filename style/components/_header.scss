@@ -1,0 +1,50 @@
+.header {
+  &-container {
+    background-color: #a9efdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  &__title {
+    font-size: $title-large;
+    color: #3149e5;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    margin: 0 auto;
+
+    @include respond-to(middle) {
+      font-size: $title-middle;
+    }
+
+    @include respond-to(mobile) {
+      font-size: $title-mobile;
+    }
+  }
+
+  &__btn {
+    color: aqua;
+    height: 50px;
+    border-radius: 20px;
+    background-color: white;
+
+    &:hover {
+      box-shadow: 0 0px 4px 1px #131212;
+      text-shadow: 1px 1px 2px black
+    }
+
+    @include respond-to(middle) {
+      font-size: $sub-text-middle;
+      max-width: 140px;
+      height: 40px;
+    }
+    @include respond-to(mobile) {
+      font-size: $sub-text-mobile;
+      max-width: 60px;
+      height: 20px;
+    }
+  }
+
+
+}

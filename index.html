@@ -10,7 +10,7 @@
     <title>Todo list</title>
 </head>
 <body>
-<section class="page-authorization" id="login">
+<section class="page-authorization hide" id="login">
     <div class="page-authorization-container">
         <form class="form" id="sing-up">
             <div class="form-container">
@@ -55,6 +55,50 @@
     </div>
 </section>
 
+<section class="page-application" id="page-content">
+    <header class="header" id="header">
+        <div class="header-container">
+            <h1 class="header__title">ToDo List Application</h1>
+            <button class="header__btn btn">Logout</button>
+        </div>
+    </header>
+    <main class="page-application__content" id="main">
+        <h2 class="page-application__title">
+            Welcome,
+            <span class="page-application__title-name" id="welcome">???</span>,
+            here are your tasks
+        </h2>
+        <div class="page-application__controls">
+            <form action="" class="page-application__form-search form-search" id="search">
+                <div class="form-search__field">
+                    <input class="form-search__field-input" type="search" name="title" placeholder="Search by title..."
+                           autocomplete="off">
+                </div>
+                <div class="form-search__field">
+                    <select name="status" class="form-search__field-select">
+                        <option class="form-search__field-select-option" value="all">All</option>
+                        <option class="form-search__field-select-option" value="processing">In Proessing</option>
+                        <option class="form-search__field-select-option" value="done">Completed</option>
+                    </select>
+                </div>
+            </form>
+            <div class="page-application__todos todos">
+                <div class="todos-container"></div>
+            </div>
+            <div class="page-application__theme">
+                <div class="theme__field">
+                    <select id="theme" name="theme" class="theme__field-select ">
+                        <option class="theme__field-select-option" value="yellow">yellow</option>
+                        <option class="theme__field-select-option" value="red">red</option>
+                        <option class="theme__field-select-option" value="blue">blue</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button class="page-application__btn btn"></button>
+    </main>
+
+</section>
 <script src="./src/main.js" type="module"></script>
 </body>
 </html>

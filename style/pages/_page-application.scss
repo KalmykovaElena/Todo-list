@@ -1,0 +1,64 @@
+@import "../components/header";
+@import "../components/form-search";
+@import "../components/theme";
+
+.page-application {
+  &__title {
+    color: #7a7a7a;
+    font-size: $text-large;
+    text-align: center;
+    padding: 25px;
+  }
+
+  @include respond-to(middle) {
+    font-size: $text-middle;
+    padding: 20px;
+  }
+  @include respond-to(mobil) {
+    font-size: $text-mobile;
+    padding: 15px;
+  }
+
+  &-name {
+    color: black;
+    font-size: inherit;
+    text-transform: uppercase;
+  }
+
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 0 15px;
+    flex-wrap: wrap-reverse;
+    @include respond-to(middle) {
+      font-size: $text-mobile;
+      padding: 15px;
+    }
+  }
+
+  &__form-search {
+    flex-shrink: 0;
+  }
+
+  &__theme {
+    margin-right: auto;
+    flex-shrink: 0;
+  }
+
+  &__btn {
+    border: 1px solid #3149e5;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("../../assets/premium-icon-plus-3303779.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 20px 30px 0 auto;
+    @include respond-to(middle) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

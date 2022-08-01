@@ -174,6 +174,197 @@
   background-color: #ffffff;
 }
 
+.header-container {
+  background-color: #a9efdb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.header__title {
+  font-size: 3rem;
+  color: #3149e5;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__title {
+    font-size: 2rem;
+  }
+}
+.header__btn {
+  color: aqua;
+  height: 50px;
+  border-radius: 20px;
+  background-color: white;
+}
+.header__btn:hover {
+  box-shadow: 0 0px 4px 1px #131212;
+  text-shadow: 1px 1px 2px black;
+}
+@media screen and (max-width: 768px) {
+  .header__btn {
+    font-size: 1.4rem;
+    max-width: 140px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__btn {
+    font-size: 1rem;
+    max-width: 60px;
+    height: 20px;
+  }
+}
+
+.form-search__field {
+  max-width: 280px;
+  height: 45px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .form-search__field {
+    max-width: 230px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form-search__field {
+    max-width: 150px;
+    height: 25px;
+  }
+}
+.form-search__field-input, .form-search__field-select {
+  width: 100%;
+  height: 100%;
+  color: #7a7a7a;
+  border: 1.5px solid #7a7a7a;
+  border-radius: 15px;
+  padding: 0 10px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.form-search__field-input:focus, .form-search__field-select:focus {
+  outline: none;
+  box-shadow: 0 0px 4px 1px #99befa;
+}
+.form-search__field::placeholder {
+  color: #7a7a7a;
+}
+@media screen and (max-width: 768px) {
+  .form-search__field {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form-search__field {
+    font-size: 1rem;
+  }
+}
+.form-search-select-option {
+  font-size: inherit;
+}
+
+.theme__field {
+  height: 45px;
+}
+@media screen and (max-width: 768px) {
+  .theme__field {
+    height: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .theme__field {
+    height: 25px;
+  }
+}
+.theme__field-select {
+  height: 100%;
+  color: #7a7a7a;
+  border: 1.5px solid #7a7a7a;
+  border-radius: 15px;
+  padding: 0 10px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.theme__field-select:focus {
+  outline: none;
+  box-shadow: 0 0px 4px 1px #99befa;
+}
+.theme__field-select::placeholder {
+  color: #7a7a7a;
+}
+@media screen and (max-width: 768px) {
+  .theme__field-select {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .theme__field-select {
+    font-size: 1rem;
+  }
+}
+
+.page-application__title {
+  color: #7a7a7a;
+  font-size: 2.3rem;
+  text-align: center;
+  padding: 25px;
+}
+@media screen and (max-width: 768px) {
+  .page-application {
+    font-size: 1.8rem;
+    padding: 20px;
+  }
+}
+.page-application-name {
+  color: black;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+.page-application__controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin: 0 15px;
+  flex-wrap: wrap-reverse;
+}
+@media screen and (max-width: 768px) {
+  .page-application__controls {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}
+.page-application__form-search {
+  flex-shrink: 0;
+}
+.page-application__theme {
+  margin-right: auto;
+  flex-shrink: 0;
+}
+.page-application__btn {
+  border: 1px solid #3149e5;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url("../../assets/premium-icon-plus-3303779.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px 30px 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .page-application__btn {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 html {
   height: 100%;
 }
