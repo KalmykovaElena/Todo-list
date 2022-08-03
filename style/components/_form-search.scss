@@ -28,11 +28,9 @@
         outline: none;
         box-shadow: 0 0px 4px 1px #99befa;
       }
-    }
-
-    &::placeholder {
-      color: #7a7a7a;
-    }
+      &::placeholder {
+        color: #7a7a7a;
+      }
       @include respond-to(middle) {
         font-size: $sub-text-middle;
       }
@@ -41,11 +39,16 @@
       }
     }
 
+    
+   
+      &-select {
+        &-option {
+          font-size: inherit;
+          
+        }
+      }
 
-
-  &-select {
-    &-option {
-      font-size: inherit;
     }
-  }
+
+  
 }

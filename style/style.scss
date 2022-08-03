@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import "mixin/adaptive";
 @import "constants/font-size";
 @import "components/button";
 @import "pages/authorization";
-@import "pages/_page-application";
+@import "pages/page-application";
 html {
   height: 100%;
 

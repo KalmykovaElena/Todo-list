@@ -11,7 +11,7 @@
       height: 25px;
     }
 
-    &-select {
+    &-select{
 
       height: 100%;
       color: #7a7a7a;
@@ -29,6 +29,7 @@
       &::placeholder {
         color: #7a7a7a;
       }
+    
 
       @include respond-to(middle) {
         font-size: $sub-text-middle;
@@ -37,7 +38,11 @@
         font-size: $sub-text-mobile;
       }
     }
-
+    &-select{
+      &-option {
+        font-size: inherit;
+      }
+    }
   }
 }
 

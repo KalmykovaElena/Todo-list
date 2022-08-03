@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 .btn {
   width: 100%;
   max-width: 160px;
@@ -110,16 +111,36 @@
   outline: none;
   box-shadow: 0 0px 4px 1px #99befa;
 }
+.form__field-input::-moz-placeholder {
+  color: #b889e8;
+  font-size: 1.8rem;
+}
+.form__field-input:-ms-input-placeholder {
+  color: #b889e8;
+  font-size: 1.8rem;
+}
 .form__field-input::placeholder {
   color: #b889e8;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 768px) {
+  .form__field-input::-moz-placeholder {
+    font-size: 1.4rem;
+  }
+  .form__field-input:-ms-input-placeholder {
+    font-size: 1.4rem;
+  }
   .form__field-input::placeholder {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 480px) {
+  .form__field-input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .form__field-input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
   .form__field-input::placeholder {
     font-size: 1rem;
   }
@@ -175,7 +196,7 @@
 }
 
 .header-container {
-  background-color: #a9efdb;
+  background-color: #adc5ce;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,7 +220,7 @@
   }
 }
 .header__btn {
-  color: aqua;
+  color: #38bcbc;
   height: 50px;
   border-radius: 20px;
   background-color: white;
@@ -254,20 +275,26 @@
   outline: none;
   box-shadow: 0 0px 4px 1px #99befa;
 }
-.form-search__field::placeholder {
+.form-search__field-input::-moz-placeholder, .form-search__field-select::-moz-placeholder {
+  color: #7a7a7a;
+}
+.form-search__field-input:-ms-input-placeholder, .form-search__field-select:-ms-input-placeholder {
+  color: #7a7a7a;
+}
+.form-search__field-input::placeholder, .form-search__field-select::placeholder {
   color: #7a7a7a;
 }
 @media screen and (max-width: 768px) {
-  .form-search__field {
+  .form-search__field-input, .form-search__field-select {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .form-search__field {
+  .form-search__field-input, .form-search__field-select {
     font-size: 1rem;
   }
 }
-.form-search-select-option {
+.form-search__field-select-option {
   font-size: inherit;
 }
 
@@ -297,6 +324,12 @@
   outline: none;
   box-shadow: 0 0px 4px 1px #99befa;
 }
+.theme__field-select::-moz-placeholder {
+  color: #7a7a7a;
+}
+.theme__field-select:-ms-input-placeholder {
+  color: #7a7a7a;
+}
 .theme__field-select::placeholder {
   color: #7a7a7a;
 }
@@ -310,6 +343,9 @@
     font-size: 1rem;
   }
 }
+.theme__field-select-option {
+  font-size: inherit;
+}
 
 .page-application__title {
   color: #7a7a7a;
@@ -318,12 +354,12 @@
   padding: 25px;
 }
 @media screen and (max-width: 768px) {
-  .page-application {
+  .page-application__title {
     font-size: 1.8rem;
     padding: 20px;
   }
 }
-.page-application-name {
+.page-application__title-name {
   color: black;
   font-size: inherit;
   text-transform: uppercase;
@@ -342,6 +378,7 @@
   }
 }
 .page-application__form-search {
+  margin-left: auto;
   flex-shrink: 0;
 }
 .page-application__theme {
@@ -349,14 +386,20 @@
   flex-shrink: 0;
 }
 .page-application__btn {
-  border: 1px solid #3149e5;
+  border: 1px solid #8abfd3;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-image: url("../../assets/premium-icon-plus-3303779.png");
+  background-image: url("../../assets/plus.png");
+  background-color: #2385a8;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 70%;
   margin: 20px 30px 0 auto;
+}
+.page-application__btn:hover {
+  box-shadow: 0 0px 18px 7px #63bddf;
+  transform: scale(1.2);
 }
 @media screen and (max-width: 768px) {
   .page-application__btn {
@@ -382,6 +425,4 @@ html body {
 
 .hide {
   display: none !important;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -8,23 +8,23 @@
     font-size: $text-large;
     text-align: center;
     padding: 25px;
-  }
 
-  @include respond-to(middle) {
-    font-size: $text-middle;
-    padding: 20px;
-  }
-  @include respond-to(mobil) {
-    font-size: $text-mobile;
-    padding: 15px;
-  }
 
-  &-name {
-    color: black;
-    font-size: inherit;
-    text-transform: uppercase;
-  }
+    @include respond-to(middle) {
+      font-size: $text-middle;
+      padding: 20px;
+    }
+    @include respond-to(mobil) {
+      font-size: $text-mobile;
+      padding: 15px;
+    }
 
+    &-name {
+      color: black;
+      font-size: inherit;
+      text-transform: uppercase;
+    }
+  }
 
   &__controls {
     display: flex;
@@ -39,6 +39,7 @@
   }
 
   &__form-search {
+    margin-left: auto;
     flex-shrink: 0;
   }
 
@@ -48,14 +49,21 @@
   }
 
   &__btn {
-    border: 1px solid #3149e5;
+    border: 1px solid #8abfd3;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-image: url("../../assets/premium-icon-plus-3303779.png");
+    background-image: url("../../assets/plus.png");
+    background-color: #2385a8;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 70%;
     margin: 20px 30px 0 auto;
+
+    &:hover {
+      box-shadow:0 0px 18px 7px #63bddf;
+      transform:  scale(1.2);
+    }
     @include respond-to(middle) {
       width: 70px;
       height: 70px;
