@@ -10,7 +10,7 @@
     <title>Todo list</title>
 </head>
 <body>
-<section class="page-authorization hide" id="login">
+<section class="page-authorization " id="login">
     <div class="page-authorization-container">
         <form class="form" id="sing-up">
             <div class="form-container">
@@ -55,11 +55,11 @@
     </div>
 </section>
 
-<section class="page-application" id="page-content">
+<section class="page-application hide" id="page-content">
     <header class="header" id="header">
         <div class="header-container">
             <h1 class="header__title">ToDo List Application</h1>
-            <button class="header__btn btn">Logout</button>
+            <button class="header__btn btn" id="logoutBtn">Logout</button>
         </div>
     </header>
     <main class="page-application__content" id="main">
@@ -99,6 +99,10 @@
     </main>
 
 </section>
+
+<div id="notification" class="notification hide">
+    <span class="notification__text"></span>
+</div>
 <script src="./src/main.js" type="module"></script>
 </body>
 </html>

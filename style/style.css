@@ -111,36 +111,16 @@
   outline: none;
   box-shadow: 0 0px 4px 1px #99befa;
 }
-.form__field-input::-moz-placeholder {
-  color: #b889e8;
-  font-size: 1.8rem;
-}
-.form__field-input:-ms-input-placeholder {
-  color: #b889e8;
-  font-size: 1.8rem;
-}
 .form__field-input::placeholder {
   color: #b889e8;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 768px) {
-  .form__field-input::-moz-placeholder {
-    font-size: 1.4rem;
-  }
-  .form__field-input:-ms-input-placeholder {
-    font-size: 1.4rem;
-  }
   .form__field-input::placeholder {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .form__field-input::-moz-placeholder {
-    font-size: 1rem;
-  }
-  .form__field-input:-ms-input-placeholder {
-    font-size: 1rem;
-  }
   .form__field-input::placeholder {
     font-size: 1rem;
   }
@@ -275,12 +255,6 @@
   outline: none;
   box-shadow: 0 0px 4px 1px #99befa;
 }
-.form-search__field-input::-moz-placeholder, .form-search__field-select::-moz-placeholder {
-  color: #7a7a7a;
-}
-.form-search__field-input:-ms-input-placeholder, .form-search__field-select:-ms-input-placeholder {
-  color: #7a7a7a;
-}
 .form-search__field-input::placeholder, .form-search__field-select::placeholder {
   color: #7a7a7a;
 }
@@ -323,12 +297,6 @@
 .theme__field-select:focus {
   outline: none;
   box-shadow: 0 0px 4px 1px #99befa;
-}
-.theme__field-select::-moz-placeholder {
-  color: #7a7a7a;
-}
-.theme__field-select:-ms-input-placeholder {
-  color: #7a7a7a;
 }
 .theme__field-select::placeholder {
   color: #7a7a7a;
@@ -408,6 +376,38 @@
   }
 }
 
+.notification {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  color: aquamarine;
+  width: 200px;
+  min-height: 60px;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  background: #99befa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  transform: translate(-50%, -100%);
+  animation: dropDown 2s ease;
+}
+.notification__ {
+  text-align: center;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 480px) {
+  .notification__ {
+    font-size: 1rem;
+  }
+}
+
+@keyframes dropDown {
+  100% {
+    transform: translate(-50%, 50%);
+  }
+}
 html {
   height: 100%;
 }
@@ -425,4 +425,6 @@ html body {
 
 .hide {
   display: none !important;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
