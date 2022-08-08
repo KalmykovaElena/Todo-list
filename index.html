@@ -55,7 +55,6 @@
         </form>
     </div>
 </section>
-
 <section class="page-application hide" id="page-content">
     <header class="header" id="header">
         <div class="header-container">
@@ -84,8 +83,28 @@
                 </div>
             </form>
             <div class="page-application__todos todos">
-                <div class="todos-container"></div>
+                <div class="todos-container">
+                    <div class="todos__item todos__item_done">
+                        <div class="todos__item-status"></div>
+                        <p class="todos__item-title">Название таски</p>
+                        <div class="todos__item-edit"></div>
+                        <div class="remove"></div>
+                    </div>
+                </div>
             </div>
+
+            <div class="page-application__todos todos">
+                <div class="todos-container">
+                    <div class="todos__item todos__item_done">
+                        <div class="todos__item-status"></div>
+                        <p class="todos__item-title">Название таски</p>
+                        <div class="todos__item-edit"></div>
+                        <div class="remove"></div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="page-application__theme">
                 <div class="theme__field">
                     <select id="theme" name="theme" class="theme__field-select ">
@@ -100,9 +119,56 @@
     </main>
 
 </section>
-
 <div id="notification" class="notification hide">
     <span class="notification__text"></span>
+</div>
+
+<div id="create" class="modal hide">
+    <form class="modal-container">
+        <h2 class="modal__title">Add new</h2>
+        <div class="modal__field">
+            <input type="text" placeholder="Title..." class="modal__field-input" name="title">
+        </div>
+        <div class="modal__field">
+            <textarea placeholder="Description..." class="modal__field-textarea" name="description"></textarea>
+        </div>
+        <button class="modal__btn btn" type="submit">Add</button>
+    </form>
+</div>
+<div id="edit" class="modal hide">
+    <form class="modal-container">
+        <h2 class="modal__title">Edit</h2>
+        <div class="modal__field">
+            <input type="text" placeholder="Title..." class="modal__field-input" name="title">
+        </div>
+        <div class="modal__field">
+            <textarea placeholder="Description..." class="modal__field-textarea" name="description"></textarea>
+        </div>
+        <button class="modal__btn btn" type="submit">Save</button>
+    </form>
+</div>
+<div id="info" class="modal hide">
+    <div class="modal-container modal-container-info">
+        <h2 class="modal__title">Название задачи</h2>
+        <p class="modal__description">Описание задачи</p>
+
+        <button class="modal__btn btn" type="submit">OK</button>
+    </div>
+</div>
+
+<div id="confirm" class="modal hide">
+    <div class="modal-container modal-container-confirm">
+        <h2 class="modal__notice">Are you sure you want to delete
+            <span class="modal__notice-name">Название задачи</span>
+            item from the list?
+        </h2>
+
+        <div class="modal__actions">
+            <button class="modal__btn modal__btn_agree btn" type="submit">Yes</button>
+            <button class="modal__btn modal__btn_disagree btn" type="submit">No</button>
+        </div>
+
+    </div>
 </div>
 <script src="./src/main.js" type="module"></script>
 </body>
