@@ -1,4 +1,5 @@
 import {Notification} from "../component/modals/notification.js";
+import {notification} from "../main.js";
 
 export class Storage {
     static createNewUser(userData) {
@@ -7,12 +8,13 @@ export class Storage {
         } else {
             if (checkUserExist(userData)) {
                 notification.show('This user already exists')
+                return
             }
-
             const existUsers = JSON.parse(localStorage.getItem('users'))
             localStorage.setItem('users', JSON.stringify([...existUsers, userData]))
+
         }
-        notification.onShow('Account is created')
+        notification.show('Account is created')
         return userData.id
 
     }

@@ -380,12 +380,12 @@
   position: absolute;
   top: 0px;
   left: 50%;
-  color: aquamarine;
+  color: #f10d0d;
   width: 200px;
   min-height: 60px;
   border-radius: 15px;
   border: 1px solid #000000;
-  background: #99befa;
+  background: #edf0f5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -393,12 +393,13 @@
   transform: translate(-50%, -100%);
   animation: dropDown 2s ease;
 }
-.notification__ {
+.notification__text {
+  color: #131212;
   text-align: center;
   font-size: 1.4rem;
 }
 @media screen and (max-width: 480px) {
-  .notification__ {
+  .notification__text {
     font-size: 1rem;
   }
 }

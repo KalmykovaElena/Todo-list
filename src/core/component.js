@@ -10,7 +10,7 @@ export class Component {
     onHide() {
     }
 
-    onShow(e) {
+    onShow() {
     }
 
     hide() {

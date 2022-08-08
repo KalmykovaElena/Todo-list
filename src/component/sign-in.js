@@ -2,7 +2,7 @@ import {Component} from "../core/component.js";
 import {Form} from "../core/form.js";
 import {Validator} from "../core/validators.js";
 import {Storage} from "../core/storage.js";
-import {pageApplication} from "../main.js";
+import {notification, pageApplication} from "../main.js";
 
 export class SignInComponent extends Component {
     constructor(id, page) {
@@ -35,7 +35,10 @@ function onSubmitHandler(e) {
         }
         this.formData.clear()
         const userId = Storage.enterTodoList(formData)
-        if (!userId) return
+        if (!userId) {
+            notification.show('We are sorry the requested user does not exist.')
+            return
+        }
         localStorage.setItem('selectedUserId', userId)
 
         this.page.hide()
