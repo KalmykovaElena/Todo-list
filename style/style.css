@@ -321,7 +321,7 @@
   flex-direction: column;
   align-items: center;
 }
-.todos____item {
+.todos__item {
   width: 100%;
   height: 70px;
   max-width: 400px;
@@ -336,18 +336,18 @@
   margin-bottom: 15px;
 }
 @media screen and (max-width: 768px) {
-  .todos____item {
+  .todos__item {
     padding: 15px;
     height: 65px;
   }
 }
 @media screen and (max-width: 480px) {
-  .todos____item {
+  .todos__item {
     padding: 10px;
     height: 60px;
   }
 }
-.todos____item-title {
+.todos__item-title {
   font-size: 1.8rem;
   white-space: nowrap;
   overflow: hidden;
@@ -358,16 +358,16 @@
   max-width: 350px;
 }
 @media screen and (max-width: 768px) {
-  .todos____item-title {
+  .todos__item-title {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .todos____item-title {
+  .todos__item-title {
     font-size: 1rem;
   }
 }
-.todos____item-status, .todos____item-edit, .todos____item-remove {
+.todos__item-status, .todos__item-edit, .todos__item-remove {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -375,45 +375,45 @@
   background-position: center;
   background-size: contain;
 }
-.todos____item-status:hover, .todos____item-edit:hover, .todos____item-remove:hover {
+.todos__item-status:hover, .todos__item-edit:hover, .todos__item-remove:hover {
   transform: scale(1.1);
 }
 @media screen and (max-width: 768px) {
-  .todos____item-status, .todos____item-edit, .todos____item-remove {
+  .todos__item-status, .todos__item-edit, .todos__item-remove {
     width: 30px;
     height: 30px;
   }
 }
 @media screen and (max-width: 480px) {
-  .todos____item-status, .todos____item-edit, .todos____item-remove {
+  .todos__item-status, .todos__item-edit, .todos__item-remove {
     width: 20px;
     height: 20px;
   }
 }
-.todos____item-status {
+.todos__item-status {
   background-image: url("./../../assets/icons8-check-64.png");
   background-color: white;
 }
-.todos____item-eit {
+.todos__item-edit {
   background-image: url("./../../assets/icons8-pen-48.png");
   visibility: hidden;
 }
-.todos____item-remove {
+.todos__item-remove {
   background-image: url("./../../assets/icons8-remove-67.png");
   visibility: hidden;
 }
-.todos____item:hover {
+.todos__item:hover {
   cursor: pointer;
   box-shadow: 0 0px 4px 5px #7a7a7a;
 }
-.todos____item:hover .todos__item-edit,
-.todos____item:hover .todos__item-remove {
+.todos__item:hover .todos__item-edit,
+.todos__item:hover .todos__item-remove {
   visibility: visible;
 }
-.todos____item_done {
-  text-decoration: line-through white;
+.todos__item_done {
+  text-decoration: line-through black;
 }
-.todos____item_done .todos__item-status {
+.todos__item_done .todos__item-status {
   background-color: #3149e5;
 }
 
