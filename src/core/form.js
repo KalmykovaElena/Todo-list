@@ -48,6 +48,9 @@ function clearNoticeError(input) {
         if (input.closest('.form__field')) {
             input.closest('.form__field').removeChild(input.nextSibling)
             input.parentElement.classList.remove('invalid')
+        } else if (input.closest(".modal__field")) {
+            input.closest(".modal__field").removeChild(input.nextSibling)
+            input.parentElement.classList.remove('invalid')
         }
     }
 }

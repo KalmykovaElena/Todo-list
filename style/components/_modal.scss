@@ -116,6 +116,19 @@
       }
     }
 
+    &.invalid {
+      .modal__field-input,
+      .modal__field-textarea {
+        border: 1.5px solid #56221e;
+        box-shadow: 0 0px 10px 1px #56221e;
+
+      }
+
+      .form__field-warning {
+        color: #56221e;
+        font-size: $sub-text-mobile;
+      }
+    }
   }
 
   &__notice,
@@ -125,8 +138,9 @@
     font-weight: 400;
     text-align: center;
     margin-bottom: 10px;
-    &-name{
-      color:red;
+
+    &-name {
+      color: red;
       font-weight: 700;
     }
   }

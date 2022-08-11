@@ -374,6 +374,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  flex-shrink: 0;
 }
 .todos__item-status:hover, .todos__item-edit:hover, .todos__item-remove:hover {
   transform: scale(1.1);
@@ -619,6 +620,15 @@
   .modal__field-textarea::placeholder {
     font-size: 1.4rem;
   }
+}
+.modal__field.invalid .modal__field-input,
+.modal__field.invalid .modal__field-textarea {
+  border: 1.5px solid #56221e;
+  box-shadow: 0 0px 10px 1px #56221e;
+}
+.modal__field.invalid .form__field-warning {
+  color: #56221e;
+  font-size: 1rem;
 }
 .modal__notice, .modal__notice-name {
   color: #7a7a7a;
