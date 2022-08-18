@@ -1,6 +1,7 @@
 import {Storage} from "../core/storage.js";
 
 export const renderTodos = () => {
+    console.log(Storage.getUserData())
     const {todoList} = Storage.getUserData()
     if (todoList.length === 0) {
         return '<p class="todos-notice">List is empty</p>'
