@@ -47,13 +47,45 @@ export class Storage {
         notification.show('Post created')
 
     }
+    static editPost(todoId,formData){
+        const users = JSON.parse(localStorage.getItem('users'))
+        const currentUser=findUserData()
+        const indexCurrentUser=users.findIndex((user)=>{
+            return user.id === currentUser.id
+        })
+        const indexTodo=currentUser.todoList.findIndex((todo)=>{
+            return todo.id===parseInt(todoId)
+        })
+        const updateUser={
+            ...currentUser,
+            todoList:[...currentUser.todoList.slice(0,indexTodo),formData,...currentUser.todoList.slice(indexTodo+1)]
+        }
+        const updateUserArray=[...users.slice(0,indexCurrentUser),updateUser,...users.slice((indexCurrentUser+1))]
+        localStorage.setItem('users',JSON.stringify(updateUserArray))
+        notification.show('Post changed')
+    }
+
+    static setTodoStatus(todoId){
+        const users = JSON.parse(localStorage.getItem('users'));
+        const currentUser = findUserData();
+        const indexCurrentUser = users.findIndex((user) =>
+            user.id
+            ===
+            currentUser.id
+        );
+        currentUser.todoList.forEach((todo) => {
+            if (todo.id == parseInt(todoId)) {
+                todo.status = todo.status === 'processing' ? 'done' : 'processing';
+            }
+        });
+        const updateUsersArray = [...users.slice(0, indexCurrentUser), currentUser, ...users.slice(indexCurrentUser + 1)];
+        localStorage.setItem('users', JSON.stringify(updateUsersArray));
+    }
 
     static getUserData() {
         return findUserData()
     }
-static editPost(){
 
-}
     static getTodoInfo(todoId) {
         const currentUser = findUserData()
         return currentUser.todoList.find(todo => todo.id === parseInt(todoId))

@@ -1,7 +1,7 @@
 import {Storage} from "../core/storage.js";
 
-export const renderConfirm=()=>{
-    export const todo = Storage.getTodoInfo(todoId)
+export const renderConfirm=(todoId)=>{
+    const todo = Storage.getTodoInfo(todoId)
     return `
     <div class="modal-container modal-container-confirm">
         <h2 class="modal__notice">Are you sure you want to delete

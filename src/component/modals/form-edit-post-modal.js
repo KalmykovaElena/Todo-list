@@ -2,6 +2,7 @@ import {Component} from "../../core/component.js";
 import {Storage} from "../../core/storage.js";
 import {Validator} from '../../core/validators.js'
 import {pageApplication} from "../../main.js";
+import {Form} from "../../core/form.js";
 
 export class FormEditPostModal extends Component {
     constructor(id) {
@@ -11,7 +12,7 @@ export class FormEditPostModal extends Component {
     init() {
         this.component.addEventListener('click', oncloseModalHandler.bind(this))
         this.formWrapper = this.component.firstElementChild
-        this.formWrapper.addEventListener()('submit',onsubmitPostHandler.bind(this))
+        this.formWrapper.addEventListener('submit',onsubmitPostHandler.bind(this))
         this.formData = new Form(this.formWrapper,{
             title:[Validator.required],
             description:[Validator.required]
@@ -44,11 +45,9 @@ function onsubmitPostHandler(e){
             ...this.todoData,
             ...this.formData.value()
         }
-        if (this.formWrapper.title.value!=this.todoData.title
+        if (this.formWrapper.title.value!=this.todoData.title ||
             this.formWrapper.description.value != this.todoData.description)
-        {
-
-        }
+        Storage.editPost(this.id,formData)
 this.hide()
             pageApplication.show()
         }
