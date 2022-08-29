@@ -106,6 +106,18 @@ export class Storage {
         localStorage.setItem('users', JSON.stringify(updateUsersArray))
         notification.show('Post removed')
     }
+
+    static setTheme(theme){
+        const users = JSON.parse(localStorage.getItem('users'))
+        const currentUser = findUserData()
+        const indexCurrentUser = users.findIndex(user => user.id === currentUser.id)
+        const updateUser={
+            ...currentUser,
+            theme:theme
+        }
+        const updateUsersArray = [...users.slice(0, indexCurrentUser), updateUser, ...users.slice(indexCurrentUser + 1)]
+        localStorage.setItem('users', JSON.stringify(updateUsersArray))
+    }
 }
 
 function checkUserExist(newUserData) {

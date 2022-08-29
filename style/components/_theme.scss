@@ -45,6 +45,35 @@
     }
   }
 }
+.yellow {
+  .header-container,
+  .todos__item,
+  .page-application__btn {
+    background-color: $theme-color_yellow;
+
+  }
+
+}
+
+.blue {
+  .header-container,
+  .todos__item,
+  .page-application__btn {
+    background-color: $theme-color_blue;
+
+  }
+}
+
+.red {
+  .header-container,
+  .todos__item,
+  .page-application__btn {
+    background-color: $theme-color_red;
+
+  }
+}
+
+
 
 
 

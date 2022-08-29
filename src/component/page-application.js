@@ -2,6 +2,8 @@ import {Component} from "../core/component.js"
 import {confirmActionModal, createPostFormModal, formEditPostModal, todoInfoModal} from "../main.js";
 import {renderTodos} from "../template/render-post.js";
 import {Storage} from "../core/storage.js";
+import {Search} from "./search.js";
+import {TeamComponent} from "./theme.js";
 
 export class PageApplication extends Component {
     constructor(id, pageAuthorization) {
@@ -16,17 +18,24 @@ export class PageApplication extends Component {
         this.createBtn.addEventListener('click', onShowFormCreatePostHandler)
         this.todoList = document.querySelector('.todos-container')
         this.welcome = document.getElementById('welcome')
+        this.search= new Search('search')
+       this.theme= new TeamComponent('theme',this.component)
     }
 
     onShow() {
         this.todoList.innerHTML = ''
-        const html = renderTodos()
+        this.component.classList.add(this.theme.value())
+        const html = renderTodos(this.search.value())
         this.todoList.insertAdjacentHTML('afterbegin', html)
         this.items = this.todoList.querySelectorAll('.todos__item')
         Array.from(this.items).forEach(item => {
             item.addEventListener('click', onTodoHandler)
         })
         this.welcome.innerHTML=Storage.getUserData().name
+    }
+    onHide(){
+        this.search.clear()
+        this.welcome.innerText=''
     }
 
 }
